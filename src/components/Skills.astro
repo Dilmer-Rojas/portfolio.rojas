@@ -1,0 +1,37 @@
+---
+// Reemplaza ExperienceItem por SkillItem
+import SkillItem from "./SkillItem.astro"
+
+const SKILLS = [
+  {
+    skill: "Power BI",
+    area: "Visualización de Datos",
+    description: "Diseño dashboards interactivos con DAX, filtros dinámicos y storytelling visual para decisiones estratégicas.",
+  },
+  {
+    skill: "SQL",
+    area: "Consultas y Modelado de Datos",
+    description: "Extracción, transformación y análisis de datos relacionales con consultas eficientes y creación de KPIs.",
+  },
+  {
+    skill: "Python",
+    area: "Análisis y Limpieza de Datos",
+    description: "Automatización de análisis exploratorios y visualizaciones usando Pandas, Seaborn y Jupyter Notebooks.",
+  },
+  {
+    skill: "Narrativa con Datos",
+    area: "Comunicación Efectiva",
+    description: "Traducción de análisis técnicos en historias comprensibles y accionables para equipos no técnicos.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    SKILLS.map((skill) => (
+      <li>
+        <SkillItem {...skill} />
+      </li>
+    ))
+  }
+</ol>

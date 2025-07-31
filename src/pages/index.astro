@@ -4,7 +4,9 @@ import Layout from "@/layouts/Layout.astro"
 import AboutMe from "@/components/AboutMe.astro"
 import Briefcase from "@/components/icons/Briefcase.astro"
 import CodeIcon from "@/components/icons/Code.astro"
-import Experience from "@/components/Experience.astro"
+// import Experience from "@/components/Experience.astro"
+import SkillsApli from "@/components/icons/SkillsApli.astro"
+import Skills from "@/components/Skills.astro"
 import ProfileCheck from "@/components/icons/ProfileCheck.astro"
 import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
@@ -23,12 +25,20 @@ import TitleSection from "@/components/TitleSection.astro"
     </Hero>
     </SectionContainer>
     <div class="space-y-24">
-    <SectionContainer id="experiencia">
+    <!-- <SectionContainer id="experiencia">
       <TitleSection>
         <Briefcase class="size-8" />
         Experiencia laboral
       </TitleSection>
       <Experience />
+    </SectionContainer> -->
+
+    <SectionContainer id="skills">
+      <TitleSection>
+        <SkillsApli class="size-8" />
+        Habilidades Aplicadas
+      </TitleSection>
+      <Skills />
     </SectionContainer>
 
     <SectionContainer id="proyectos">
