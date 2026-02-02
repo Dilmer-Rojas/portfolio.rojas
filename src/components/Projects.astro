@@ -8,7 +8,7 @@ import PowerBI from "./icons/PowerBI.astro";
 import SQLServer from "./icons/SQLServer.astro";
 import Python from "./icons/Python.astro";
 import PDF from "./icons/Pdf.astro";
-import Imaico from "./icons/ImageIcon.astro";
+
 
 const TAGS = {
   NEXT: {
@@ -45,7 +45,6 @@ const PROJECTS = [
     link: "https://app.powerbi.com/groups/me/reports/47584f11-b20c-4b6f-9142-c29f7d861a58/ee61dbf363ab37347ac6?experience=power-bi",
     github: "https://github.com/Dilmer-Rojas/Ventas_Adidas",
     report: "/reports/Adidas_Profit_Optimization.pdf",
-    imagenrep: "/reports/reporte-adidas.png",
     image: "/projects/adidas_us_sales.png",
     tags: [TAGS.PYTHON, TAGS.SQLSERVER, TAGS.POWERBI],
   },
@@ -139,12 +138,6 @@ const PROJECTS = [
                   <LinkButton href={report} target="_blank" rel="noopener">
                     <PDF class="size-5" />
                     Report
-                  </LinkButton>
-                )}
-                {imagenrep && (
-                  <LinkButton href={imagenrep}>
-                    <Imaico class="size-5" />
-                    Imagen
                   </LinkButton>
                 )}
               </footer>
