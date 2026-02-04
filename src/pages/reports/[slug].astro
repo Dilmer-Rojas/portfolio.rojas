@@ -29,11 +29,11 @@ if (!report) {
         class="rounded-xl shadow-lg mb-8 max-w-4xl w-full mx-auto object-contain"
     />
 
-    <a
-        href={report.pdf}
-        target="_blank"
-        class="bg-red-600 px-5 py-3 rounded-lg hover:bg-red-700 transition"
-    >
-        Ver PDF
+    <a href={report.pdf} target="_blank" rel="noopener noreferrer" download>
+        <button
+            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-8"
+        >
+            Download Report (PDF)
+        </button>
     </a>
 </section>
