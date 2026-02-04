@@ -1,0 +1,39 @@
+---
+import { REPORTS } from "../../data/reports";
+
+export function getStaticPaths() {
+    return Object.keys(REPORTS).map((slug) => ({
+        params: { slug },
+    }));
+}
+
+const { slug } = Astro.params;
+
+type ReportKey = keyof typeof REPORTS;
+
+const report = REPORTS[slug as ReportKey];
+
+if (!report) {
+    return Astro.redirect("/");
+}
+---
+
+<section class="min-h-screen bg-gray-900 text-white p-10">
+    <h1 class="text-3xl font-bold mb-8">
+        {report.title}
+    </h1>
+
+    <img
+        src={report.image}
+        alt={report.title}
+        class="rounded-xl shadow-lg mb-8 max-w-4xl w-full mx-auto object-contain"
+    />
+
+    <a
+        href={report.pdf}
+        target="_blank"
+        class="bg-red-600 px-5 py-3 rounded-lg hover:bg-red-700 transition"
+    >
+        Ver PDF
+    </a>
+</section>
