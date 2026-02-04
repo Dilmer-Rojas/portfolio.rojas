@@ -9,7 +9,6 @@ import SQLServer from "./icons/SQLServer.astro";
 import Python from "./icons/Python.astro";
 import PDF from "./icons/Pdf.astro";
 
-
 const TAGS = {
   NEXT: {
     name: "Next.js",
@@ -45,7 +44,7 @@ const PROJECTS = [
     link: "https://app.powerbi.com/groups/me/reports/47584f11-b20c-4b6f-9142-c29f7d861a58/ee61dbf363ab37347ac6?experience=power-bi",
     github: "https://github.com/Dilmer-Rojas/Ventas_Adidas",
     report: "/reports/reporte-adidas.png",
-    image: "/projects/adidas_us_sales.png",
+    image: "/projects/reporte-adidas-final.png",
     tags: [TAGS.PYTHON, TAGS.SQLSERVER, TAGS.POWERBI],
   },
   {
@@ -80,15 +79,7 @@ const PROJECTS = [
 <div class="flex flex-col gap-y-16">
   {
     PROJECTS.map(
-      ({
-        image,
-        title,
-        description,
-        tags,
-        link,
-        github,
-        report,
-      }) => (
+      ({ image, title, description, tags, link, github, report }) => (
         <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
           <div class="w-full md:w-1/2">
             <div class="ad">
