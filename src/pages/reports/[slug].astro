@@ -28,12 +28,19 @@ if (!report) {
         alt={report.title}
         class="rounded-xl shadow-lg mb-8 max-w-4xl w-full mx-auto object-contain"
     />
-
-    <a href={report.pdf} target="_blank" rel="noopener noreferrer" download>
-        <button
-            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-8"
+    <div class="flex justify-center mt-6">
+        <a
+            href={report.pdf}
+            target="_blank"
+            class="bg-red-600 px-4 py-2 rounded"
         >
-            Download Report (PDF)
-        </button>
-    </a>
+            Ver PDF
+        </a>
+    </div>
+
+    <div class="w-full max-w-5xl mx-auto mt-8">
+        <iframe
+            src={`https://docs.google.com/gview?url=${Astro.site}${report.pdf}&embedded=true`}
+            class="w-full h-[800px] rounded-lg"></iframe>
+    </div>
 </section>
