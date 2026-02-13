@@ -8,6 +8,6 @@ export const REPORTS = {
     amazon: {
         title: "Reporte Ejecutivo Amazon",
         image: "/reports/reporte-amazon.png",
-        pdf: "/reports/reporte-amazon.pdf"
+        pdf: "/reports/Inteligencia_de_Ventas_Amazon.pdf"
     }
 };
